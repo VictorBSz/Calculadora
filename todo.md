@@ -1,5 +1,5 @@
-[] Menu e opções
-[] Sistema de mensagem e limpeza do console
+[x] Menu e opções
+[x] Sistema de mensagem e limpeza do console
 - Operadores:
     [] Adição
     [] Subtração

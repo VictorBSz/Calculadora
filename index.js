@@ -1,10 +1,20 @@
 const { select, number } = require('@inquirer/prompts')
 
-const start = async () => {
+const mostrarMensagem = () => {
+    console.clear
+    if (mensagem != "")
+        console.log(mensagem)
+        console.log("")
+        mensagem = ""
+}
 
+mensagem = "Bem vindo à calculadora! Selecione uma das operações para começar:"
+
+const start = async () => {
+    mostrarMensagem()
     while(true) {
         const option = await select({
-            message: "Menu >",  /* O select aguarda um obj com exatamente esses props */
+            message: ">",  /* O select aguarda um obj com exatamente esses props */
             choices: [
                 {
                     name: "Adição",
@@ -30,7 +40,7 @@ const start = async () => {
                     name: "Sair",
                     value: "sair"
                 }
-            ]
+            ],
         }) /* await = aguardar, sempre q usarmos await, temos q ter async no const da função */
         /* Aqui usamos o await para que o programa espere o usuario escolher uma opção, inves de ficar rodando igual louco */
 
