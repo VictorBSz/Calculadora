@@ -1,7 +1,17 @@
 const { select, number } = require('@inquirer/prompts')
 
+const adicao = async () => {
+    let res = 0
+    const n1 = await number ({ message: "Digite o primeiro número: "})
+    const n2 = await number ({ message: "Digite o segundo número: "})
+    res = n1 + n2
+
+    mensagem = "O resultado de " + n1 + "+" + n2 + " é: " + res
+    return
+}
+
 const mostrarMensagem = () => {
-    console.clear
+    console.clear()
     if (mensagem != "")
         console.log(mensagem)
         console.log("")
@@ -11,8 +21,8 @@ const mostrarMensagem = () => {
 mensagem = "Bem vindo à calculadora! Selecione uma das operações para começar:"
 
 const start = async () => {
-    mostrarMensagem()
     while(true) {
+        mostrarMensagem()
         const option = await select({
             message: ">",  /* O select aguarda um obj com exatamente esses props */
             choices: [
