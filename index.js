@@ -20,6 +20,16 @@ const subtracao = async () => {
     return
 }
 
+const divisao = async () => {
+    let res = 0
+    const n1 = await number ({ message: "Digite o primeiro número: "})
+    const n2 = await number ({ message: "Digite o segundo número: "})
+    res = n1 / n2
+
+    mensagem = "O resultado de " + n1 + "/" + n2 + " é: " + res
+    return
+}
+
 const mostrarMensagem = () => {
     console.clear()
     if (mensagem != "")
