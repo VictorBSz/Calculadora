@@ -26,7 +26,7 @@ const divisao = async () => {
     const n2 = await number ({ message: "Digite o segundo número: "})
     res = n1 / n2
 
-    mensagem = "O resultado de " + n1 + "/" + n2 + " é: " + res
+    mensagem = "O resultado de " + n1 + " dividido por " + n2 + " é: " + res
     return
 }
 
@@ -37,6 +37,17 @@ const multiplicacao = async () => {
     res = n1 * n2
 
     mensagem = "O resultado de " + n1 + "x" + n2 + " é: " + res
+    return
+}
+
+const porcentagem = async () => {
+    let res = 0
+    const n1 = await number ({ message: "Digite o primeiro número: "})
+    const porc = await number ({ message: "Digite a porcentagem do primeiro numero: "})
+    n2 = porc / 100
+    res = n1 * n2
+
+    mensagem = "O resultado de " + porc + "%" + " de " + n1 + " é: " + res
     return
 }
 
