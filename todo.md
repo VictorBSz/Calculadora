@@ -3,9 +3,9 @@
 - Operadores:
     [x] Adição
         [] Resolver bug com valores indefinidos
-    [] Subtração
-    [] Multiplicação
-    [] Divisão
+    [x] Subtração
+    [x] Multiplicação
+    [x] Divisão
 - Outros cálculos que eu tiver ideia:
     [] Porcentagem
     [] Potenciação
