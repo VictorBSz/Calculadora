@@ -47,7 +47,7 @@ const porcentagem = async () => {
     n2 = porc / 100
     res = n1 * n2
 
-    mensagem = "O resultado de " + porc + "%" + " de " + n1 + " é: " + res
+    mensagem = porc + "%" + " de " + n1 + " é: " + res
     return
 }
 
@@ -62,7 +62,7 @@ const potenciacao = async () => {
         pot--
     }
 
-    mensagem = "O resultado de " + n1 + " elevado a "  + n2 + " é: " + res
+    mensagem = n1 + " elevado a "  + n2 + " é: " + res
     return
 }
 
