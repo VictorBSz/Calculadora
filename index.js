@@ -51,6 +51,21 @@ const porcentagem = async () => {
     return
 }
 
+const potenciacao = async () => {
+    let res = 0
+    const n1 = await number ({ message: "Digite o primeiro número: "})
+    let pot = await number ({ message: "Digite a potencia do primeiro numero: "})
+    n2 = pot
+    res = n1
+    while (pot != 1) {
+        res = res * n1 
+        pot--
+    }
+
+    mensagem = "O resultado de " + n1 + " elevado a "  + n2 + " é: " + res
+    return
+}
+
 const mostrarMensagem = () => {
     console.clear()
     if (mensagem != "")
@@ -88,6 +103,10 @@ const start = async () => {
                     value: "porc"
                 },
                 {
+                    name: "Potenciação",
+                    value: "pot"
+                },
+                {
                     name: "Sair",
                     value: "sair"
                 }
@@ -110,6 +129,9 @@ const start = async () => {
                 break
             case "porc":
                 await porcentagem()
+                break
+            case "pot":
+                await potenciacao()
                 break
             case "sair":
                 console.log("Até a proxima!")

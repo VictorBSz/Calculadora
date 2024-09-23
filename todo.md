@@ -7,5 +7,5 @@
     [x] Multiplicação
     [x] Divisão
 - Outros cálculos que eu tiver ideia:
-    [] Porcentagem
-    [] Potenciação
+    [x] Porcentagem
+    [x] Potenciação
