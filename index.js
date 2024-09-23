@@ -1,9 +1,16 @@
 const { select, number } = require('@inquirer/prompts')
 
 const adicao = async () => {
+
     let res = 0
     const n1 = await number ({ message: "Digite o primeiro número: "})
     const n2 = await number ({ message: "Digite o segundo número: "})
+    
+    if (isNaN(n1) || isNaN(n2)) {
+        mensagem = "Numero invalido, verifique o número informado e tente novamente!"
+        return
+    }
+    
     res = n1 + n2
 
     mensagem = "O resultado de " + n1 + "+" + n2 + " é: " + res
@@ -11,9 +18,16 @@ const adicao = async () => {
 }
 
 const subtracao = async () => {
+
     let res = 0
     const n1 = await number ({ message: "Digite o primeiro número: "})
     const n2 = await number ({ message: "Digite o segundo número: "})
+
+    if (isNaN(n1) || isNaN(n2)) {
+        mensagem = "Numero invalido, verifique o número informado e tente novamente!"
+        return
+    }
+
     res = n1 - n2
 
     mensagem = "O resultado de " + n1 + "-" + n2 + " é: " + res
@@ -21,9 +35,21 @@ const subtracao = async () => {
 }
 
 const divisao = async () => {
+
     let res = 0
     const n1 = await number ({ message: "Digite o primeiro número: "})
     const n2 = await number ({ message: "Digite o segundo número: "})
+
+    if (isNaN(n1) || isNaN(n2)) {
+        mensagem = "Numero invalido, verifique o número informado e tente novamente!"
+        return
+    }
+
+    else if (n1 === 0 || n2 === 0) {
+        mensagem = "Não é possível dividir por zero, tente novamente com outro número!"
+        return
+    }
+
     res = n1 / n2
 
     mensagem = "O resultado de " + n1 + " dividido por " + n2 + " é: " + res
@@ -34,6 +60,12 @@ const multiplicacao = async () => {
     let res = 0
     const n1 = await number ({ message: "Digite o primeiro número: "})
     const n2 = await number ({ message: "Digite o segundo número: "})
+
+    if (isNaN(n1) || isNaN(n2)) {
+        mensagem = "Numero invalido, verifique o número informado e tente novamente!"
+        return
+    }
+
     res = n1 * n2
 
     mensagem = "O resultado de " + n1 + "x" + n2 + " é: " + res
@@ -44,6 +76,12 @@ const porcentagem = async () => {
     let res = 0
     const n1 = await number ({ message: "Digite o primeiro número: "})
     const porc = await number ({ message: "Digite a porcentagem do primeiro numero: "})
+
+    if (isNaN(n1) || isNaN(porc)) {
+        mensagem = "Numero invalido, verifique o número informado e tente novamente!"
+        return
+    }
+
     n2 = porc / 100
     res = n1 * n2
 
@@ -52,9 +90,22 @@ const porcentagem = async () => {
 }
 
 const potenciacao = async () => {
+
     let res = 0
     const n1 = await number ({ message: "Digite o primeiro número: "})
     let pot = await number ({ message: "Digite a potencia do primeiro numero: "})
+
+    if (isNaN(n1) || isNaN(pot)) {
+        mensagem = "Numero invalido, verifique o número informado e tente novamente!"
+        return
+    }
+
+    else if (pot === 0) {
+        res = 1
+        mensagem = n1 + " elevado a "  + n2 + " é: " + res
+        return
+    }
+    
     n2 = pot
     res = n1
     while (pot != 1) {
